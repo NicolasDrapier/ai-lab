@@ -1,0 +1,7 @@
+{
+  "name": "ai-lab",
+  "version": "0.1.0",
+  "description": "A team of AI agents that writes LaTeX research papers from your project's results.",
+  "author": { "name": "Nicolas Drapier" },
+  "keywords": ["research", "paper", "latex", "writing", "agents"]
+}
