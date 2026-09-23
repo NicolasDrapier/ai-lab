@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "ai-lab",
+  "owner": { "name": "Nicolas Drapier" },
+  "description": "ai-lab: agent team for writing AI research papers.",
+  "plugins": [
+    {
+      "name": "ai-lab",
+      "source": "./",
+      "description": "A team of AI agents that writes LaTeX research papers from your project's results."
+    }
+  ]
+}
