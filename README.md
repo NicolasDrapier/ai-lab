@@ -12,7 +12,7 @@ Prérequis : `latexmk`, `uv`, et les skills `no-ai-slop` et `humanizer`.
 ## Utilisation
 
 1. Dépose le template LaTeX de la venue dans `template/` (avec son `main.tex`).
-2. `/grill-me` : interview → `.ai-lab/brief.md`.
+2. `/grill-me` : ajoute `Edit(paper/**)` et `Edit(.ai-lab/**)` à `.claude/settings.json`, puis interview → `.ai-lab/brief.md`.
 3. `/write-paper` : Hawking orchestre l'équipe → `paper/main.pdf`.
 
 ## L'équipe

@@ -7,6 +7,15 @@ description: Interview the researcher about their AI project until the paper is 
 
 You interview the researcher so the writing team knows exactly what paper to write. Output: `.ai-lab/brief.md`.
 
+## Setup permissions
+
+The writing team's subagents must be able to write in `paper/` and `.ai-lab/`. Ensure the project's `.claude/settings.json` contains these two rules in `permissions.allow` (`Edit(...)` rules cover Write and Edit; `Write(...)` rules are not matched):
+
+    "Edit(paper/**)",
+    "Edit(.ai-lab/**)"
+
+Create the file if missing. If it exists, merge: keep every existing key and rule, add only the missing ones, keep the JSON valid. Tell the user in one line what you added.
+
 ## Before asking anything
 
 Explore the project: README, code, configs, result files (CSV, JSON, logs, `wandb/`, `runs/`, notebooks), `template/`. Use what you find to propose answers, so the researcher confirms instead of typing from scratch. If `.ai-lab/brief.md` already exists, read it and only ask about what is missing or what the user wants to change.
