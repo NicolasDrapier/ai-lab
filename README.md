@@ -4,8 +4,19 @@ Une équipe d'agents Claude qui écrit un papier de recherche IA en LaTeX à par
 
 ## Installation (dans le projet de recherche)
 
-    /plugin marketplace add <chemin-ou-url-de-ce-repo>
+    /plugin marketplace add NicolasDrapier/ai-lab
     /plugin install ai-lab@ai-lab --scope project
+
+Pour que toute l'équipe l'ait automatiquement, commite dans `.claude/settings.json` du projet :
+
+    {
+      "extraKnownMarketplaces": {
+        "ai-lab": { "source": { "source": "github", "repo": "NicolasDrapier/ai-lab" } }
+      },
+      "enabledPlugins": { "ai-lab@ai-lab": true }
+    }
+
+Mise à jour : `/plugin marketplace update ai-lab` (pense à incrémenter `version` dans `plugin.json`).
 
 Prérequis : `latexmk`, `uv`, et les skills `no-ai-slop` et `humanizer`.
 
